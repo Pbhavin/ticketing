@@ -4,6 +4,7 @@ import { OrderCreatedListener } from './events/listeners/order-created-listener'
 import { natsWrapper } from './nats-wrapper';
 import mongoose from 'mongoose';
 const start = async () => {
+    console.log('starting payments service!!');
     if (!process.env.JWT_KEY) {
         throw new Error('JWT KEY Needs to be defined!!');
     }
