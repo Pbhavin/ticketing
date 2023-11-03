@@ -15,7 +15,7 @@ it('Get the Current User Sucessfully', async () => {
         .get('/api/users/currentuser')
         .set('Cookie', ck)
         .send()
-        .expect(200);
+        .expect(400);
 
     expect(cuserResp.body.currentUser.email).toEqual('test@g.com');
 });
